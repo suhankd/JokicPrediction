@@ -16,5 +16,5 @@ Some notes :
 
 1. I trained the model using season-by-season data batches rather than normalizing the entire dataset at once, due to the non-normal distribution of the data. Intuitively this seemed to work best.
 2. Downloaded the source code for Steph Curry's 2016 season and used it as reference when scraping.
-3. The Euclidean distance between the predictions and the y-Matrix were promising, but when the dynamic time warping (DTW) algorithm was applied and generated a warping curve, even stronger similarities between the predictions and the actual data were noticed. With a bit of human intuition added in, this model could be very effective
+3. The Euclidean distance between the predictions and the y-Matrix were promising, but when the dynamic time warping (DTW) algorithm was applied and generated a warping curve, even stronger similarities between the predictions and the actual data were noticed. With a bit of human intuition added in, this model could be very effective.
 4. Will implement an LSTM-based model on this dataset as well.
