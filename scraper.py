@@ -2,6 +2,10 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
+"""
+Scraper that parses through basketball-reference.com and returns the game logs of a player, in this case Nikola Jokic.
+"""
+
 for year in range(2020, 2025):
 
     url = f"https://www.basketball-reference.com/players/j/jokicni01/gamelog/{year}"

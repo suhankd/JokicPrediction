@@ -1,5 +1,5 @@
 """
-Contains a master function to return a group of processed dfs.
+Contains a function to return a group of processed dfs.
 """
 
 import pandas as pd

@@ -1,8 +1,13 @@
 import pandas as pd
 import numpy as np
+import pickle
 
 from sklearn.preprocessing import StandardScaler
 from processing import processing
+
+"""
+Script that generates a set of pre-trained time series models to use in ensembling.
+"""
 
 dfs = processing(f'Data')
 
@@ -32,7 +37,6 @@ for year in range(2021, 2024):
     Model_LSTM.fit(X_normalized, y, epochs=100)
 
 Model_LSTM.save('Models/Model_LSTM.keras')    
-
 
 # GRU
 
@@ -85,4 +89,5 @@ for year in range(2021, 2024):
 
     Model_XGB.fit(X, y)
 
-Model_XGB.save_model('Models/Model_XGB.bin')
+with open("Models/Model_XGB.pkl", 'wb') as file:
+    pickle.dump(Model_XGB, file)
